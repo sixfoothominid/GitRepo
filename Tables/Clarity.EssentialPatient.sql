@@ -1,0 +1,42 @@
+CREATE TABLE [Clarity].[EssentialPatient]
+(
+[PAT_ID] [varchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[PAT_NAME] [varchar] (508) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[BIRTH_DATE] [datetime] NULL,
+[PATIENT_SEX] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PATIENT_STATE] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ETHNICITY] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MARITAL_STATUS] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PATIENT_RELIGION] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PATIENT_LANGUAGE] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[HOME_PHONE] [varchar] (192) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[WORK_PHONE] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ADD_LINE_1] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ADD_LINE_2] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CITY] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MEDICARE_NUM] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MEDICAID_NUM] [varchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SSN] [varchar] (192) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[EMAIL_ADDRESS] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PCP_PROV_ID] [varchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PCP_PROV_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PCP_NPI] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ZIP] [varchar] (60) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ETHNIC_GROUP_C] [numeric] (18, 0) NULL,
+[STATE_C] [varchar] (66) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[STATE_ABBR] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[COUNTY_C] [varchar] (66) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MARITAL_STATUS_C] [numeric] (18, 0) NULL,
+[RELIGION_C] [numeric] (18, 0) NULL,
+[LANGUAGE_C] [varchar] (66) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PAT_STATUS_C] [varchar] (66) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SEX_C] [varchar] (66) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PAT_FIRST_NAME] [varchar] (508) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PAT_MIDDLE_NAME] [varchar] (508) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PAT_LAST_NAME] [varchar] (508) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DEATH_DATE] [datetime] NULL,
+[PAT_STATUS_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [ix_MultCol_ChgDetail] ON [Clarity].[EssentialPatient] ([PAT_ID]) INCLUDE ([ADD_LINE_1], [ADD_LINE_2], [BIRTH_DATE], [CITY], [PAT_NAME], [PATIENT_SEX], [ZIP]) ON [PRIMARY]
+GO

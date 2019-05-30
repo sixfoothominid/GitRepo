@@ -1,0 +1,32 @@
+CREATE TABLE [Clarity].[EssentialOrCaseAllProc]
+(
+[OR_CASE_ID] [varchar] (18) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[LINE] [numeric] (18, 0) NOT NULL,
+[OR_PROC_ID] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[OR_PROC_CODE] [varchar] (30) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PROC_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LRB_C] [numeric] (18, 0) NULL,
+[LRB_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ANES_TYPE_C] [numeric] (18, 0) NULL,
+[ANES_TYPE_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[OP_REG_C] [numeric] (18, 0) NULL,
+[OP_REG_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PICKLIST_GEN_C] [numeric] (18, 0) NULL,
+[PICKLIST_GEN_NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TOTAL_LENGTH] [numeric] (18, 0) NULL,
+[PANEL] [numeric] (18, 0) NULL,
+[COMMENTS] [varchar] (500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DEFAULTED_LENGTH] [numeric] (18, 2) NULL,
+[RESOURCE_PREF_ID] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PICKLIST_PREF_ID] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LENGTH_MODIFIED_YN] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MATCHED_PREF_ID] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[POSSIBLE_PROC_YN] [varchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DBC_EPISODE_ID] [numeric] (18, 0) NULL,
+[PROC_EAP_ID] [numeric] (18, 0) NULL,
+[ALL_PROC_AS_ORDERED] [varchar] (500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALL_PROC_CODE_ID] [numeric] (18, 0) NULL,
+[ALL_DEF_OR_PROC_ID] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PROC_DISPLAY_NAME] [varchar] (500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
